@@ -9,8 +9,8 @@ int main() {
         string S;
         cin>>S;
         
-        map<char, int> Map1;
-        map<char, int> Map2;
+        unordered_map<char, int> Map1;
+        unordered_map<char, int> Map2;
         
         for(int i=0; i<S.length(); i++){
             Map1[S[i]]++;
