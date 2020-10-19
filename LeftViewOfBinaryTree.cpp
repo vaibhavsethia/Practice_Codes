@@ -14,7 +14,7 @@ public:
     
     vector<int> Sol;
     
-    void RightViewUtil(TreeNode* root, int Level, int* MaxLevel){
+    void LeftViewUtil(TreeNode* root, int Level, int* MaxLevel){
         if(!root){
             return;
         }
@@ -24,14 +24,14 @@ public:
             *MaxLevel = Level;
         }
         
-        RightViewUtil(root->left, Level+1, MaxLevel);
-        RightViewUtil(root->right, Level+1, MaxLevel);
+        LeftViewUtil(root->left, Level+1, MaxLevel);
+        LeftViewUtil(root->right, Level+1, MaxLevel);
     }
     
-    vector<int> rightSideView(TreeNode* root) {
+    vector<int> leftSideView(TreeNode* root) {
        int Max = 0;
         Sol.clear();
-        RightViewUtil(root, 1, &Max);
+        LeftViewUtil(root, 1, &Max);
         return Sol;  
     }
 };

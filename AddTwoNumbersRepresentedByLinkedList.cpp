@@ -28,22 +28,7 @@ struct Node* addTwoLists(struct Node* first, struct Node* second)
     if(second == NULL){
         return first;
     }
-    
-    Node *Temp = first;
-    int M = 0, N = 0;
-    
-    while(Temp != NULL){
-        Temp = Temp->next;
-        M++;
-    }
-    
-    Temp = second;
-    
-    while(Temp != NULL){
-        Temp = Temp->next;
-        N++;
-    }
-    
+        
     first = reverseList(first);
     second = reverseList(second);
     
@@ -55,7 +40,7 @@ struct Node* addTwoLists(struct Node* first, struct Node* second)
         Sum = Carry + (first ? first->data : 0) + (second ? second->data : 0); 
         Carry = (Sum >= 10) ? 1 : 0; 
         Sum = Sum % 10; 
-        Temp = newNode(Sum); 
+        Node* Temp = newNode(Sum); 
         
         if (Res == NULL) {
             Res = Temp;

@@ -13,7 +13,6 @@ public:
         for(int i=0; i<s.length()-1; i++){
            if(s[i] == s[i+1]){
                DP[i][i+1] = true;
-               Start = i;
                MaxLen = 2;
            }
         }
@@ -26,7 +25,6 @@ public:
                     DP[j][k] == true;
                     
                     if(i > MaxLen){
-                        Start = j;
                         MaxLen = i;
                     }
                 }
