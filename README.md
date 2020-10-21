@@ -2,7 +2,8 @@
 C++ Codes solved while preparing for interviews
 
 ### Theoretical Topics : 
-- OS Basics
+- Computer Network basics
+- OS basics
 - CPU Scheduling Algos
 - Page Fault
 - Segmentation 
