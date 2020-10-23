@@ -19,7 +19,7 @@ void reorderList(Node* head) {
     
     while (fast && fast->next) { 
         slow = slow->next; 
-        fast = fast->next->next; 
+        fast = fast->next->next;
     } 
     
     Node* head1 = head; 
